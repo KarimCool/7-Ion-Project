@@ -4,7 +4,7 @@
 [ext_resource path="res://Player/movement.cs" type="Script" id=2]
 [ext_resource path="res://World/Tileset/tile set.png" type="Texture" id=3]
 [ext_resource path="res://Player/Weapon/Default/gun 32x32.png" type="Texture" id=4]
-[ext_resource path="res://Player/Weapon/Default/Bullet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/Weapon/Default/Bullet/bulletSystem.cs" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 24 )
@@ -113,4 +113,5 @@ tile_data = PoolIntArray( 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Bullet" parent="." instance=ExtResource( 5 )]
+[node name="bulletSystem" type="Node2D" parent="."]
+script = ExtResource( 5 )
