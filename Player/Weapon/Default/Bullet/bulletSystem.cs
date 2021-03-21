@@ -4,7 +4,6 @@ using System;
 public class bulletSystem : Node2D
 {
     PackedScene rlBullet;
-    float ten;
 
     public bulletSystem()
     {
@@ -16,14 +15,19 @@ public class bulletSystem : Node2D
 
     }
 
-
-    public override void _Process(float delta)
+    public void shoot()
     {
         if (Input.IsKeyPressed(69))
         {
-            var Ballet = rlBullet.Instance();
-            AddChild(Ballet);
 
+            var bullet = rlBullet.Instance() as Node2D;
+            bullet.Position = GetNode<KinematicBody2D>("../Player").Position + new Vector2(32, -3);
+            AddChild(bullet);
         }
+    }
+
+    public override void _Process(float delta)
+    {
+        shoot();
     }
 }
