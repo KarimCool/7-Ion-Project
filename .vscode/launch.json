@@ -15,7 +15,7 @@
             "type": "godot-mono",
             "request": "launch",
             "mode": "executable",
-            "executable": "c:\\Users\\karim\\Desktop\\project\\Godot\\Godot_v3.2.3-stable_mono_win64.exe",
+            "executable": "c:\\Users\\karim\\Desktop\\project\\Godot\\Godot_v3.3-stable_mono_win64",
             "executableArguments": [
                 "--path",
                 "${workspaceRoot}"
